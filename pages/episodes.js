@@ -59,11 +59,3 @@ return (
   </>
 );
 }
-
-export async function getServerSideProps(ctx) {
-const data = await instance({
-  url: 'character',
-  params: ctx.query,
-});
-return { props: data.data };
-}
